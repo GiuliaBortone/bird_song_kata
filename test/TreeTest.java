@@ -18,4 +18,12 @@ public class TreeTest {
 
         assertEquals(0, tree.songsFor(birds));
     }
+
+    @Test
+    void noBranchesAndAnyBirdCanGenerateZeroSongs() {
+        int birds = 25, branches = 0;
+        Tree tree = new Tree(branches);
+
+        assertEquals(0, tree.songsFor(birds));
+    }
 }
