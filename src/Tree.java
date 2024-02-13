@@ -6,7 +6,16 @@ public class Tree {
     }
 
     public int songsFor(int birds) {
-        if (birds == 1 && branches == 1) return 1;
-        return 0;
+        if (branches == 0) {
+            return 0;
+        }
+        return factorial(birds);
+    }
+
+    private int factorial(int birds) {
+        if (birds <= 2)
+            return birds;
+
+        return birds * factorial(birds - 1);
     }
 }

@@ -42,4 +42,12 @@ public class TreeTest {
 
         assertEquals(1, tree.songsFor(birds));
     }
+
+    @Test
+    void twoBranchesAndOneBirdCanGenerateTwoSongs() {
+        int birds = 2, branches = 2;
+        Tree tree = new Tree(branches);
+
+        assertEquals(2, tree.songsFor(birds));
+    }
 }
