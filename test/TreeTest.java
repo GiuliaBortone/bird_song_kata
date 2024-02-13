@@ -35,4 +35,12 @@ public class TreeTest {
 
         assertEquals(120, tree.songsFor(birds));
     }
+
+    @Test
+    void higherAmountOfBranchesComparedToBirdsCanGenerateSongsDependingOnEmptyBranches() {
+        int birds = 3, branches = 5;
+        Tree tree = new Tree(branches);
+
+        assertEquals(60, tree.songsFor(birds));
+    }
 }

@@ -14,6 +14,10 @@ public class Tree {
             return factorial(birds) / factorial(birds - branches);
         }
 
+        if (birds < branches) {
+            return factorial(branches) / factorial(branches - birds);
+        }
+
         return factorial(birds);
     }
 
