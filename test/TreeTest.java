@@ -10,4 +10,12 @@ public class TreeTest {
 
         assertEquals(0, tree.songsFor(birds));
     }
+
+    @Test
+    void noBranchesAndOneBirdCanGenerateZeroSongs() {
+        int birds = 1, branches = 0;
+        Tree tree = new Tree(branches);
+
+        assertEquals(0, tree.songsFor(birds));
+    }
 }
