@@ -36,18 +36,10 @@ public class TreeTest {
     }
 
     @Test
-    void oneBranchAndOneBirdCanGenerateOneSong() {
-        int birds = 1, branches = 1;
+    void sameAmountOfBranchesAndBirdsCanGenerateAmountFactorialSongs() {
+        int birds = 3, branches = 3;
         Tree tree = new Tree(branches);
 
-        assertEquals(1, tree.songsFor(birds));
-    }
-
-    @Test
-    void twoBranchesAndOneBirdCanGenerateTwoSongs() {
-        int birds = 2, branches = 2;
-        Tree tree = new Tree(branches);
-
-        assertEquals(2, tree.songsFor(birds));
+        assertEquals(6, tree.songsFor(birds));
     }
 }
