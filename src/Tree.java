@@ -9,6 +9,11 @@ public class Tree {
         if (branches == 0 || birds == 0) {
             return 0;
         }
+
+        if (birds > branches) {
+            return factorial(birds) / factorial(birds - branches);
+        }
+
         return factorial(birds);
     }
 
