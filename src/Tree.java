@@ -10,21 +10,16 @@ public class Tree {
             return 0;
         }
 
+        int possibleSongs;
+
         if (birds > branches) {
-            return factorial(birds) / factorial(birds - branches);
+            possibleSongs = Math.disposition(birds, branches);
+        } else if (birds < branches) {
+            possibleSongs = Math.disposition(branches, birds);
+        } else {
+            possibleSongs = Math.factorial(birds);
         }
 
-        if (birds < branches) {
-            return factorial(branches) / factorial(branches - birds);
-        }
-
-        return factorial(birds);
-    }
-
-    private int factorial(int birds) {
-        if (birds <= 2)
-            return birds;
-
-        return birds * factorial(birds - 1);
+        return possibleSongs;
     }
 }
